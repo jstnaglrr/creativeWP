@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+
+            <div class="header__wrapper">
+            
+                <div class="header__logo">
+                    <img src="./img/logo.png" alt="">
+                        <h2>Creative <span>Visual</span> Design</h2>
+                </div>
+
+                <nav class="navBar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="toggle_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </header>
+
+    <section class="section_contacts">
+        <div class="container">
+            <h1>Contact</h1>
+
+            <div class="sectionContacts__wrapper">
+
+                <div class="leftContent">
+
+                    <div class="sectionContacts_info">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione eligendi ipsam amet inventore autem rerum?
+                        </p>
+                    </div>
+
+                    <div class="sectionContacts_info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-phone-flip fa-2x"></i>
+                                <i class="fa-solid fa-envelope fa-2x"></i>
+                                <i class="fa-solid fa-map-pin fa-2x"></i>
+                            </li>
+                            <li>
+                                <p>+63 912 3456 789</p>
+                                <p>inquire@creativevisualdesigns.com</p>
+                                <p>Baloc, Brgy. San Ignacio, San Pablo City, Laguna, Philippines, 4000</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="rightContent">
+                    <div class="textarea">
+                    </div>
+
+                    <div class="textarea_mid">
+                    </div>
+
+                    <div class="textarea_bottom">
+                    </div>
+
+                    <div class="tags_content">
+                        <a href="#">Send Message</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer_wrapper">
+                <div class="footer_links">
+
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> </li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i></i></a></li>
+                    </ul>
+
+                    <p><small>
+                            Baloc Road, Brgy San ignacio San Pablo City, Laguna
+                    </small></p>
+
+                </div>
+
+                <p><small>
+                        &copy;CREATIVEVISUALDESIGN 2023
+                    </small>
+                </p>
+
+            </div>
+        </div>
+
+    </footer>
+
+<script>
+    const nav = document.querySelector(".navBar");
+    const toggle_menu = document.querySelector(".toggle_menu");
+
+    toggle_menu.addEventListener("click",()=>{
+        toggle_menu.classList.toggle("open");
+        nav.classList.toggle("open");
+    });
+</script>
+    
+</body>
+</html>

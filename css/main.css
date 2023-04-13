@@ -1,0 +1,933 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #ffa700;
+    --black: #2b2b2b;
+    --gray: #808080;
+    --white: #ffffff;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*********** HEADER CSS ***********/
+header{
+    background-color: var(--black);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.container{
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+}
+.header__logo span{
+    color: var(--primary);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a{
+    color: var(--gray);
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: var(--primary)
+}
+.toggle_menu {
+    cursor: pointer;
+    display: none;
+}   
+.toggle_menu span {
+    background-color: var(--primary);
+    display: block;
+    height: 0.2rem;
+    width: 2rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in;
+
+}
+@media (max-width: 768px) {
+    .toggle_menu {
+    display: block;
+    transition: 0.5s ease-in;
+    }
+    nav.open ul {
+    right: -50%;
+    transition: 0.5s ease-in;
+    }
+    nav ul {
+        display: block;
+        position: absolute;
+        right: -100%;
+        top: 6.6rem;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        text-align: left;
+        transition: 0.5s ease-in;
+    }
+    nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: var(--black);
+    border-bottom:  1px solid rgb(220, 220, 220);
+    }
+    nav ul li:hover {
+    background-color: var(--primary);
+    }
+    nav ul li:hover a {
+    color: var(--black);
+    }
+    .toggle_menu.open span:nth-child(1){
+        transition: 0.5s ease;
+        transform: translate(-2px, 7.3px) rotate(45deg);
+    }
+    .toggle_menu.open span:nth-child(2){
+       opacity: 0;
+       transition: 0s;
+    }
+    .toggle_menu.open span:nth-child(3){
+        transition: 0.5s ease;
+        transform: translate(-2px, -12px) rotate(-45deg);
+    }
+}
+
+/*********** END HEADER CSS ************/
+
+/*********** BANNER CSS ************/
+.banner{
+    padding: 13rem 0 6rem;
+}
+.banner__wrapper{
+    display: flex;
+    align-items: center ;
+}
+@media (max-width: 998px){
+    .banner__wrapper{
+        flex-direction: column;
+    }
+    .banner img{
+        width: 100% !important; 
+    }
+    .banner{
+        padding: 12rem 0 5rem;
+    }
+}
+.banner img{
+    width: 40rem;
+}
+.banner__content h1{
+    color: var(--primary);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+}
+.banner__content a{
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+.banner__content p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 9rem;
+    text-align: justify;
+}
+/*********** END BANNER CSS ************/
+
+/*********** SECTION 2 CSS ************/
+.section2{
+    background-color: var(--black);
+    padding: 5rem 0;
+}
+.section2__gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.section2__gridContent{
+    text-align: center;
+}
+.section2 p{
+    text-align: justify;
+    padding: 2rem;
+    color: var(--white);
+    font-size: 15px;
+}
+.section2 h3{
+    margin-top: 40px;
+    color: var(--primary);
+}
+.section2 img{
+    padding: 0;
+}
+.section2 a{
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+@media (max-width: 998px){
+    .section2__gridWrapper{
+        grid-template-columns: 1fr; 
+    }
+    .section2{
+        margin: 0 auto;
+    }
+    .section2 img{
+        margin: 0.3rem;
+    }
+    .section2 p{
+        margin: 0.5rem;
+    }
+    .section2 a{
+        margin: 2rem;
+    }
+}
+/*********** END SECTION 2 CSS ************/
+
+/*********** SECTION 3 CSS ************/
+.section3{
+    background-color: var(--white);
+    padding: 7rem 0;
+}
+.section3__gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.section3 h2{
+    margin-top: 70px;
+    margin-left: 70px;
+    color: var(--primary);
+}
+.section3 p{
+    text-align: justify;
+    color: var(--black);
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+@media (max-width: 998px){
+    .section3__gridWrapper{
+        display: block;
+        margin: 0 auto;
+    }
+    .section3__gridContent img{
+        display: block;
+        margin: 0 auto  ;
+    }
+    .section3__gridContent h2{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    .section3__gridContent p{
+        display: block;
+        margin: 1rem;
+    }
+    .section3{
+        width: 100% !important; 
+    }
+}
+/*********** END SECTION 3 CSS ************/
+
+/*********** SECTION 4 CSS ************/
+.Section_4{
+    background-color: var(--black);
+    padding: 7rem;
+}
+.Section__4gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.Section__4gridContent{
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin-top: 3rem;
+}
+.Section_4 p{
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.Section_4 h3{
+    margin-bottom: 5rem;
+    font-size: 25px;
+    color: var(--white);
+}
+.Section_4 h4{
+    padding: 1rem;
+    color: var(--primary);
+    text-align: left;
+}
+.Section_4 h1{
+    font-size: 40px;
+    color: var(--primary);
+}
+.Section_4 img{
+    padding: 0;
+}
+.Section_4 a{
+    text-decoration: none;
+    color: var(--primary);
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 3rem;
+}
+.Section__4gridContent a:hover{
+    color: var(--black);
+}
+.card p{
+    color: var(--black);
+    font-size: 15px;
+    padding: 1rem;
+}
+@media (max-width: 998px){
+    .Section__4gridWrapper{
+        display: block;
+        width: 100%;
+    }
+    .Section_4{
+        width: 100% !important; 
+    }
+    .Section__4gridContent{
+        display: block;
+        width: 100%;
+    }
+    .Section_4 img{
+        width: 100%;
+    }
+}
+
+/*********** END SECTION 4 CSS ************/
+
+/*********** SECTION 5 CSS ************/
+.section_5{
+    background-color: var(--primary);
+    padding: 4rem;
+}
+.section5__gridWrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+.section5__gridContent{
+    text-align: center;
+}
+.section_5 a{
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem 3.5rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+.section_5 h3{
+        font-size: 30px;
+}
+.section_5 p{
+    font-size: 20px;
+}
+/*********** END SECTION 5 CSS ************/
+
+/*********** FOOTER CSS ************/
+.footer {
+    background-color: var(--black);
+    color: var(--gray);
+    padding: 2rem;
+}
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.footer ul li a i {
+    font-size: 1.5rem;
+    color: var(--gray);
+    text-align: left;
+}
+.footer_links {
+    display: flex;
+    gap: 1rem;
+}
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+/*********** END FOOTER CSS ************/
+
+/*********** ABOUT HTML ************/
+
+/*********** ABOUT BANNER CSS ************/
+.banner_2 {
+    padding: 12rem 0 2rem;
+}
+.banner__wrapper2 {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.banner_content2 h1 {
+    color: var(--primary);
+    font-size: 5rem;
+    line-height: 1; 
+    margin-bottom: 3rem;
+}
+.banner_content2 a {
+    text-decoration: none;
+    color: var(--primary);
+    margin-top: 2rem;
+    padding: 0.5rem;    
+    display: inline-block;
+    border-radius: 2rem;
+    font-size: 30px;
+}
+.banner_content2 p {
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    text-align: justify;
+}
+.arrow{
+    font-size: 30px;
+    text-align: center;
+    color: var(--primary);
+}
+.banner_2 img{
+    width: 30rem;
+}
+@media (max-width: 998px){
+    .banner__wrapper2{
+        display: block;
+        width: 100%;
+    }
+    .banner_2{
+        padding: 9rem 0 2rem;
+        width: 100% !important; 
+    }
+    .banner_content2{
+        display: block;
+        width: 100%;
+    }
+    .banner_2 img{
+        width: 100%;
+    }
+}
+/*********** END ABOUT BANNER CSS ************/
+
+/*********** SECTION TRENDS CSS ************/
+.section_trends{
+    background-color: var(--black);
+    padding: 2rem 0 5rem;
+}
+.section__trendsGridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.section__trendsgridContent{
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+.section_trends p{
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.section_trends h3{
+    margin-bottom: 5rem;
+    font-size: 25px;
+    color: var(--white);
+}
+.section_trends h4{
+    padding: 1rem;
+    color: var(--primary);
+    text-align: left;
+}
+.section_trends h1{
+    font-size: 40px;
+    color: var(--primary);
+}
+.section_trends img{
+    padding: 0;
+}
+.section_trends a{
+    text-decoration: none;
+    color: var(--primary);
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 3rem;
+}
+.card_trends p{
+    color: var(--black);
+    font-size: 15px;
+    padding: 1rem;
+}
+@media (max-width: 998px){
+    .section__trendsGridWrapper{
+        display: block;
+        width: 100%;
+    }
+    .section_trends{
+        width: 100% !important; 
+    }
+    .Section__4gridContent{
+        display: block;
+        width: 100%;
+    }
+    .section_trends img{
+        width: 100%;
+    }
+}
+/*********** END SECTION TRENDS CSS ************/
+
+/*********** SERVICES HTML ************/
+
+/*********** SERVICES BANNER CSS ************/
+.banner_3 {
+    padding: 10rem 0 5rem;
+  
+}
+.banner__wrapper3 {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.banner_content3 h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    line-height: 1;
+}
+.banner_content3 a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 2rem;
+    font-size: 30px;
+}
+.banner_content3 p {
+    color: var(--black);
+    font-size: 15px;
+    padding: 0;
+    text-align: justify;
+    margin-top: 3rem;
+    margin-right: 10rem;
+}
+.price span {
+    color: var(--primary);
+    font-size: 30px;
+}
+.banner_3 img{
+    width: 30rem;
+}
+@media (max-width: 998px){
+    .banner__wrapper3{
+        display: block;
+        margin: 0 auto;
+    }
+    .banner_content3 img{
+        display: block;
+        margin: 0 auto  ;
+    }
+    .banner_content3 h1{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 2rem;
+        /* text-align: center; */
+    }
+    .banner_content3 p{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+    .banner_3 img{
+        margin-top: 1rem;
+        width: 100% !important; 
+    }
+}
+
+/*********** SERVICES BANNER 3 CSS ************/
+
+/*********** SERVICES SECTION 3 CSS ************/
+.services_3{
+    padding: 4rem 0;
+    background-color: var(--black);
+}
+.services__wrapper3 {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.services_content3 h1 {
+    color: var(--primary);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+.services_content3 a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 2rem;
+    font-size: 30px;
+
+}
+.services_content3 p {
+    margin: 4rem 0;
+    text-align: justify;
+    color: var(--white); 
+}
+.services_price span {
+    color: var(--primary);
+    font-size: 30px;
+}
+.services_3 img{
+    width: 30rem;
+}
+@media (max-width: 998px){
+    .services__wrapper3{
+        display: block;
+        margin: 0 auto;
+    }
+    .services_content3 img{
+        display: block;
+        margin: 0 auto  ;
+    }
+    .services_content3 h1{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 3rem;
+        /* text-align: center; */
+    }
+    .services_content3 p{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services_3 img{
+        margin-bottom: 3rem;
+        width: 100% !important; 
+    }
+}
+/*********** END SERVICES SECTION 3 CSS ************/
+
+/*********** SERVICES BANNER 4 CSS ************/
+
+.banner_4 {
+    padding: 3rem 0;
+  
+}
+.banner__wrapper4 {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.banner_content4 h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    line-height: 1;
+}
+.banner_content4 a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 2rem;
+    font-size: 30px;
+}
+.banner_content4 p {
+    color: var(--black);
+    font-size: 15px;
+    padding: 0;
+    text-align: justify;
+    margin-top: 3rem;
+    margin-right: 10rem;
+}
+.banner_4price span {
+    color: var(--primary);
+    font-size: 30px;
+}
+.banner_4 img{
+    width: 30rem;
+}
+@media (max-width: 998px){
+    .banner__wrapper4{
+        display: block;
+        margin: 0 auto;
+    }
+    .banner_content4 img{
+        display: block;
+        margin: 0 auto  ;
+    }
+    .banner_content4 h1{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 2rem;
+        /* text-align: center; */
+    }
+    .banner_content4 p{
+        display: block;
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+    .banner_4 img{
+        margin-bottom: 2rem;
+        width: 100% !important; 
+    }
+}
+/*********** END SERVICES BANNER 4 CSS ************/
+
+/*********** UPDATE HTML ************/
+
+/*********** SECTION UPDATE CSS ************/
+.updateTrends{
+    padding: 10rem 0 2rem;
+}
+.updateTrends h2{
+    color: var(--primary);
+    font-size: 48px;
+}
+.updateTrends_topic ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+.updateTrends_topic ul li i{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.updateTrends h3{
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+.updateTrends a{
+    color: var(--primary);
+    text-decoration: none;
+    margin-top: 2rem;
+    display: block;
+}
+.border-bottom{
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+.pb-2{
+    padding-bottom: 2rem;
+}
+.updateTrends_topic{
+    padding: 3rem 0;
+}
+.updateTrends_wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3rem;
+}
+.updateTrends_topic img{
+    width: 100%;
+}
+.categories ul{
+    list-style: none;
+    margin: 2rem 0;
+}
+.categories ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+}
+.categories{
+    padding: 2.5rem 0;
+}
+.categories h2{
+    font-size: 25px;
+}
+.thePost{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.recentPost h2{
+    margin-bottom: 3rem;
+    font-size: 25px;
+}
+.thePost h4{
+    margin-bottom: 1rem;
+}
+.recentPost{
+    padding: 3rem 0;
+}
+.tags{
+    padding: 2rem 0;
+}
+.tags a{    
+    border: 2px solid var(--black);
+    display: inline-block;
+    color: var(--black);
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    margin-right: 1.2rem;
+}
+.bg-dark{
+    background-color: var(--black);
+}
+.t-white{
+    color: var(--white) !important;
+}
+
+@media (max-width: 998px) {
+    .updateTrends_wrapper{
+        grid-template-columns: 1fr;
+    }
+    .updateTrends_topic ul{
+        display: block  ;
+    }
+@media (max-width: 768px) {
+    .footer_wrapper{
+        display: block;
+    }
+    .footer_links{
+        text-align: center;
+    }
+    .footer_links ul{
+        justify-content: center;
+    }
+}
+}
+/*********** END SECTION UPDATE CSS ************/
+
+/*********** CONTACT HTML ************/
+.section_contacts{
+    background-color: var(--black);
+    padding: 7rem;
+}
+.sectionContacts__wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+.sectionContacts__content{
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin-top: 3rem;
+}
+.section_contacts h1{
+    color: var(--primary);
+    font-size: 48px;
+    margin-top: 4rem;
+}
+.sectionContacts_info p{
+    color: var(--white);
+    margin-top: 3rem;
+}
+.sectionContacts_info ul{
+    list-style: none;
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sectionContacts_info ul li i{
+    display: flex;
+    margin-top: 2.8rem;
+    color: var(--primary);
+}
+.sectionContacts_info ul li p{
+    display: flex;
+    margin-top: 3.2rem;
+    color: white;
+    margin-left: 1rem;
+}
+.textarea {
+    width: 500px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+.textarea_mid {
+    width: 500px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+.textarea_bottom {
+    width: 500px;
+    height: 170px;
+    padding: 12px 20px;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+.tags_content{
+    padding: 2rem 0;
+}
+.tags_content a{    
+    background-color: #ffa700;
+    border: 2px solid #ffa700;
+    display: inline-block;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    margin-right: 1.2rem;
+    text-decoration: none;
+}
